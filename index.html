@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Divya Ahire — Full-Stack Web Developer & MCA Student from Nashik, India. Building scalable web apps with React, Node.js, Supabase, and PostgreSQL." />
+  <title>Divya Ahire — Full-Stack Web Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav-logo" aria-label="Home">DA<span class="logo-dot">.</span></a>
+    
+    <nav aria-label="Primary navigation" class="nav-menu" id="nav-menu">
+      <ul class="nav-links">
+        <li><a href="#work"       class="nav-link">Work</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#stack"      class="nav-link">Stack</a></li>
+        <li><a href="#about"      class="nav-link">About</a></li>
+        <li><a href="#contact"    class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="resume.pdf" download class="nav-resume" id="nav-btn-resume" aria-label="Download resume">Resume ↓</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════
+         HERO
+    ══════════════════════════════ -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+      <div class="hero-inner">
+        <!-- Left: Hero Intro Content -->
+        <div class="hero-content">
+          <div class="hero-status mono">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span>Available for Full-Stack Roles &amp; Projects</span>
+          </div>
+
+          <div class="hero-greeting mono" aria-live="polite">
+            <span class="greeting-prompt" aria-hidden="true">&gt;&nbsp;</span><span id="typewriter"></span><span class="cursor" aria-hidden="true">|</span>
+          </div>
+
+          <h1 class="hero-name">
+            Hi, I'm <span class="gradient-text">Divya Ahire</span><span class="name-dot">.</span>
+          </h1>
+
+          <p class="hero-role">
+            Full-Stack Web Developer <span class="hero-role-sep" aria-hidden="true">/</span> <span class="hero-role-accent">MCA Student</span>
+          </p>
+
+          <p class="hero-bio">
+            I build scalable, user-focused web applications with a strong foundation in
+            computer science fundamentals. Eager to solve complex problems and deploy
+            robust software solutions.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#work"    class="btn-primary">View My Work</a>
+            <a href="#contact" class="btn-ghost">Get in Touch</a>
+            <a href="resume.pdf" download class="btn-ghost hero-btn-resume" aria-label="Download resume">Resume ↓</a>
+          </div>
+
+          <!-- Quick stack badges -->
+          <div class="hero-stack-strip" aria-label="Core stack preview">
+            <span class="hero-stack-label mono">TECH:</span>
+            <div class="hero-stack-tags">
+              <span class="tag">React.js</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">PHP</span>
+            </div>
+          </div>
+
+          <!-- Icon-only social links -->
+          <div class="hero-socials" aria-label="Social profiles">
+            <a href="https://github.com/DivyaAhire11" target="_blank" rel="noopener noreferrer" class="hero-social-btn" id="hs-github" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/divya-ahire" target="_blank" rel="noopener noreferrer" class="hero-social-btn" id="hs-linkedin" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="mailto:divyaahire246@gmail.com" class="hero-social-btn" id="hs-email" aria-label="Send email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m3 9 9 6 9-6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Developer Terminal / Code Card -->
+        <div class="hero-visual">
+          <div class="hero-terminal" aria-label="Engineer profile code preview">
+            <div class="terminal-header">
+              <div class="terminal-dots" aria-hidden="true">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="terminal-title mono">divya_profile.ts</span>
+              <span class="terminal-badge mono">v2.6</span>
+            </div>
+
+            <div class="terminal-code mono">
+              <div class="t-line"><span class="t-kw">const</span> <span class="t-var">developer</span> = {</div>
+              <div class="t-line indent-1"><span class="t-prop">name</span>: <span class="t-str">"Divya Ahire"</span>,</div>
+              <div class="t-line indent-1"><span class="t-prop">role</span>: <span class="t-str">"Full-Stack Web Developer"</span>,</div>
+              <div class="t-line indent-1"><span class="t-prop">education</span>: {</div>
+              <div class="t-line indent-2"><span class="t-prop">current</span>: <span class="t-str">"MCA (Pune Univ)"</span>,</div>
+              <div class="t-line indent-2"><span class="t-prop">undergrad</span>: <span class="t-str">"BCS (Computer Science)"</span></div>
+              <div class="t-line indent-1">},</div>
+              <div class="t-line indent-1"><span class="t-prop">experience</span>: <span class="t-str">"DigiMiral AI Automation"</span>,</div>
+              <div class="t-line indent-1"><span class="t-prop">coreSkills</span>: [</div>
+              <div class="t-line indent-2"><span class="t-str">"React.js"</span>, <span class="t-str">"Node.js"</span>, <span class="t-str">"Supabase"</span>,</div>
+              <div class="t-line indent-2"><span class="t-str">"PostgreSQL"</span>, <span class="t-str">"Coolify"</span>, <span class="t-str">"Netlify"</span></div>
+              <div class="t-line indent-1">],</div>
+              <div class="t-line indent-1"><span class="t-prop">status</span>: <span class="t-status">"open_to_work"</span>,</div>
+              <div class="t-line indent-1"><span class="t-prop">deployable</span>: <span class="t-bool">true</span></div>
+              <div class="t-line">};</div>
+            </div>
+
+            <div class="terminal-footer">
+              <div class="terminal-status mono">
+                <span class="pulse-dot"></span>
+                <span>TypeScript 5.4 • Production</span>
+              </div>
+              <span class="terminal-tag mono">⚡ 0 errors</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         FEATURED WORK
+    ══════════════════════════════ -->
+    <section class="section" id="work" aria-label="Featured work">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <p class="section-label mono">01 / work</p>
+          <h2 class="section-title">Featured Work</h2>
+        </div>
+
+        <div class="work-grid reveal">
+
+          <!-- Card 1 -->
+          <article class="work-card" aria-label="Doctor Appointment Booking System">
+            <div class="work-card-top">
+              <div class="work-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/><path d="M8 3v4M16 3v4M3 13h18"/></svg>
+              </div>
+              <a href="https://github.com/DivyaAhire11" target="_blank" rel="noopener noreferrer" class="work-card-gh" aria-label="View on GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+            </div>
+            <h3 class="work-card-title">Doctor Appointment Booking System</h3>
+            <p class="work-card-desc">A full-stack booking system designed for seamless scheduling and user management. Patients discover doctors by specialty and book real-time appointments with automated confirmations.</p>
+            <ul class="work-card-features">
+              <li>Doctor discovery by specialty &amp; available time slots</li>
+              <li>Patient appointment booking with automated status confirmation</li>
+              <li>Normalized PostgreSQL schema for doctors, patients, and visit records</li>
+            </ul>
+            <div class="work-card-tags" aria-label="Tech stack">
+              <span class="tag">PHP</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="work-card" aria-label="Online Shopping Web Application">
+            <div class="work-card-top">
+              <div class="work-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              </div>
+              <a href="https://github.com/DivyaAhire11" target="_blank" rel="noopener noreferrer" class="work-card-gh" aria-label="View on GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+            </div>
+            <h3 class="work-card-title">Online Shopping Web Application</h3>
+            <p class="work-card-desc">A modern e-commerce storefront featuring interactive state management and dynamic UI components. Includes product catalog, cart, checkout flow, and an admin inventory dashboard.</p>
+            <ul class="work-card-features">
+              <li>Product catalog with instant dynamic category filtering &amp; search</li>
+              <li>Persistent cart state, checkout order pipeline &amp; order history</li>
+              <li>JWT authentication with protected admin inventory routes</li>
+            </ul>
+            <div class="work-card-tags" aria-label="Tech stack">
+              <span class="tag">React.js</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Express.js</span>
+              <span class="tag">JWT Auth</span>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="work-footer reveal">
+          <a href="https://github.com/DivyaAhire11" target="_blank" rel="noopener noreferrer" class="gh-link" id="link-github">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            More on github.com/DivyaAhire11 ↗
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         EXPERIENCE
+    ══════════════════════════════ -->
+    <section class="section section--alt" id="experience" aria-label="Work experience">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <p class="section-label mono">02 / experience</p>
+          <h2 class="section-title">Where I've Worked</h2>
+        </div>
+
+        <div class="exp-card reveal" aria-label="DigiMiral internship">
+          <div class="exp-card-left">
+            <div class="exp-badge">
+              <span class="exp-badge-dot" aria-hidden="true"></span>
+              Full-Stack Developer Intern
+            </div>
+            <p class="exp-period mono">2025 — 2026</p>
+          </div>
+
+          <div class="exp-card-right">
+            <h3 class="exp-company">DigiMiral AI Automation and Digital Marketing Pvt. Ltd.</h3>
+            <ul class="exp-achievements" role="list">
+              <li>
+                <span class="exp-bullet" aria-hidden="true">→</span>
+                Collaborated with cross-functional teams to build, test, and deploy production web applications.
+              </li>
+              <li>
+                <span class="exp-bullet" aria-hidden="true">→</span>
+                Managed and optimized deployments using <span class="exp-em">Supabase, Hostinger, Coolify, Netlify,</span> and <span class="exp-em">Shopify</span>.
+              </li>
+              <li>
+                <span class="exp-bullet" aria-hidden="true">→</span>
+                Contributed to AI-driven automation workflows and modern web development tasks.
+              </li>
+            </ul>
+            <div class="exp-tags" aria-label="Technologies used">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">Coolify</span>
+              <span class="tag">Netlify</span>
+              <span class="tag">Shopify</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         TECH STACK
+    ══════════════════════════════ -->
+    <section class="section" id="stack" aria-label="Technical skills">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <p class="section-label mono">03 / stack</p>
+          <h2 class="section-title">What I Build With</h2>
+        </div>
+
+        <div class="stack-grid reveal">
+
+          <div class="stack-col">
+            <h3 class="stack-col-title mono">Languages &amp; Backend</h3>
+            <ul class="stack-list" role="list">
+              <li class="stack-row"><span class="stack-name">Python</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:78%"></span></span></li>
+              <li class="stack-row"><span class="stack-name">Java</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:72%"></span></span></li>
+              <li class="stack-row"><span class="stack-name">PHP</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:75%"></span></span></li>
+              <li class="stack-row"><span class="stack-name">Node.js</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:88%"></span></span></li>
+              <li class="stack-row"><span class="stack-name">Express.js</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:85%"></span></span></li>
+              <li class="stack-row"><span class="stack-name">REST APIs</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:90%"></span></span></li>
+            </ul>
+          </div>
+
+          <div class="stack-col">
+            <h3 class="stack-col-title mono">Frontend</h3>
+            <ul class="stack-list" role="list">
+              <li class="stack-row"><span class="stack-name">React.js</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:90%"></span></span></li>
+              <li class="stack-row"><span class="stack-name">JavaScript</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:88%"></span></span></li>
+              <li class="stack-row"><span class="stack-name">HTML5</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:95%"></span></span></li>
+              <li class="stack-row"><span class="stack-name">CSS3</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:92%"></span></span></li>
+            </ul>
+
+            <h3 class="stack-col-title mono" style="margin-top: 32px;">Databases</h3>
+            <ul class="stack-list" role="list">
+              <li class="stack-row"><span class="stack-name">MySQL</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:82%"></span></span></li>
+              <li class="stack-row"><span class="stack-name">MongoDB</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:80%"></span></span></li>
+              <li class="stack-row"><span class="stack-name">PostgreSQL</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:85%"></span></span></li>
+            </ul>
+          </div>
+
+          <div class="stack-col">
+            <h3 class="stack-col-title mono">Tools &amp; DevOps</h3>
+            <ul class="stack-list" role="list">
+              <li class="stack-row"><span class="stack-name">Git / GitHub</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:92%"></span></span></li>
+              <li class="stack-row"><span class="stack-name">Docker</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:70%"></span></span></li>
+              <li class="stack-row"><span class="stack-name">Coolify</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:76%"></span></span></li>
+              <li class="stack-row"><span class="stack-name">Netlify</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:82%"></span></span></li>
+              <li class="stack-row"><span class="stack-name">Supabase</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:80%"></span></span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         ABOUT
+    ══════════════════════════════ -->
+    <section class="section section--alt" id="about" aria-label="About me">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <p class="section-label mono">04 / about</p>
+          <h2 class="section-title">The Engineer Behind the Commits</h2>
+        </div>
+
+        <div class="about-grid">
+
+          <div class="about-text reveal">
+            <p>
+              A Computer Science degree forges the mental models — algorithms, systems
+              thinking, the discipline of abstraction. But it is the act of deploying
+              a feature, watching real users interact with something you built from
+              scratch, that solidifies an engineer.
+            </p>
+            <p>
+              My BCS foundation and ongoing MCA gave me the
+              <em class="em-accent">theoretical rigor</em>; my internship at DigiMiral
+              gave me the instincts. I believe in owning the complete cause-and-effect
+              chain of a product — from the pixel a user first sees, through the API
+              contract, down to the indexed query hitting the database.
+            </p>
+            <blockquote class="about-quote">
+              "Make it work, make it right, make it fast — in that order, always."
+            </blockquote>
+
+            <div class="journey-timeline" aria-label="Career and education timeline">
+              <div class="journey-item">
+                <div class="journey-dot" aria-hidden="true"></div>
+                <div class="journey-body">
+                  <p class="journey-period mono">2025 — 2026</p>
+                  <h3 class="journey-role">Full-Stack Developer Intern</h3>
+                  <p class="journey-org">DigiMiral AI Automation Pvt. Ltd.</p>
+                  <p class="journey-desc">Shipped production features, integrated Supabase auth and real-time DB, deployed via Coolify and Netlify.</p>
+                </div>
+              </div>
+              <div class="journey-item">
+                <div class="journey-dot" aria-hidden="true"></div>
+                <div class="journey-body">
+                  <p class="journey-period mono">2022 — 2025</p>
+                  <h3 class="journey-role">Bachelor of Computer Science</h3>
+                  <p class="journey-org">University of Pune</p>
+                  <p class="journey-desc">Focused on Data Structures, Algorithms, DBMS, and Software Engineering.</p>
+                </div>
+              </div>
+              <div class="journey-item journey-item--active">
+                <div class="journey-dot journey-dot--active" aria-hidden="true"></div>
+                <div class="journey-body">
+                  <p class="journey-period mono">2025 — Present</p>
+                  <h3 class="journey-role">Master of Computer Applications</h3>
+                  <p class="journey-org">University of Pune</p>
+                  <p class="journey-desc">Advancing in distributed systems, cloud architecture, and enterprise software engineering.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="about-sidebar">
+            <div class="sidebar-card reveal">
+              <h3 class="sidebar-card-title">Engineering Principles</h3>
+              <ul class="principles" role="list">
+                <li class="principle">
+                  <span class="principle-num mono" aria-hidden="true">01</span>
+                  <div><strong>Clean Architecture</strong><p>Code is written for the next engineer, not just the next compiler.</p></div>
+                </li>
+                <li class="principle">
+                  <span class="principle-num mono" aria-hidden="true">02</span>
+                  <div><strong>Human-Centric UI</strong><p>Every interaction must reduce cognitive load, not add to it.</p></div>
+                </li>
+                <li class="principle">
+                  <span class="principle-num mono" aria-hidden="true">03</span>
+                  <div><strong>Performance First</strong><p>Speed is a feature. Latency is a silent tax on user trust.</p></div>
+                </li>
+                <li class="principle">
+                  <span class="principle-num mono" aria-hidden="true">04</span>
+                  <div><strong>Defensive by Default</strong><p>Security and edge cases belong in the design phase, not post-launch.</p></div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="sidebar-card sidebar-card--specs reveal">
+              <h3 class="sidebar-card-title mono">quick_facts.json</h3>
+              <dl class="specs">
+                <div class="spec-row">
+                  <dt class="spec-k mono">location</dt>
+                  <dd class="spec-v mono">"Nashik, India"</dd>
+                </div>
+                <div class="spec-row">
+                  <dt class="spec-k mono">status</dt>
+                  <dd class="spec-v mono spec-open">"open_to_work"</dd>
+                </div>
+                <div class="spec-row">
+                  <dt class="spec-k mono">education</dt>
+                  <dd class="spec-v mono">"MCA (pursuing)"</dd>
+                </div>
+                <div class="spec-row">
+                  <dt class="spec-k mono">prefer</dt>
+                  <dd class="spec-v mono">"on-site"</dd>
+                </div>
+              </dl>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         CONTACT
+    ══════════════════════════════ -->
+    <section class="section section--contact" id="contact" aria-label="Contact">
+      <div class="container container--narrow">
+
+        <p class="contact-label mono">05 / contact</p>
+        <h2 class="contact-title reveal">
+          Let's Build<br /><em class="contact-title-em">Something Together.</em>
+        </h2>
+        <p class="contact-sub reveal">
+          Open to full-time roles, freelance projects, and interesting collaborations.
+          My inbox is always open — even if it's just to talk architecture.
+        </p>
+
+        <div class="contact-actions reveal">
+          <a href="mailto:divyaahire246@gmail.com" class="btn-primary btn-lg" id="btn-email">Say Hello →</a>
+          <button type="button" class="btn-ghost btn-lg btn-copy-email" id="btn-copy-email" data-email="divyaahire246@gmail.com" aria-label="Copy email address to clipboard">
+            <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            <span id="copy-email-text">Copy Email</span>
+          </button>
+          <a href="resume.pdf" download class="btn-ghost btn-lg" id="btn-dl-resume">Download Resume ↓</a>
+        </div>
+
+        <div class="contact-socials reveal" aria-label="Social links">
+          <a href="https://github.com/DivyaAhire11" target="_blank" rel="noopener noreferrer" class="social-pill" id="social-gh">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/divya-ahire" target="_blank" rel="noopener noreferrer" class="social-pill" id="social-li">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:divyaahire246@gmail.com" class="social-pill" id="social-mail">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m3 9 9 6 9-6"/></svg>
+            Email
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p class="footer-text mono">Designed &amp; built by <span class="footer-name">Divya Ahire</span> — 2026</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
