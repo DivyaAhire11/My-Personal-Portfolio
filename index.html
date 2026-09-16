@@ -16,25 +16,37 @@
 
   <!-- ── NAV ── -->
   <header class="nav" id="nav">
-    <a href="#hero" class="nav-logo" aria-label="Home">DA<span class="logo-dot">.</span></a>
-    
-    <nav aria-label="Primary navigation" class="nav-menu" id="nav-menu">
-      <ul class="nav-links">
-        <li><a href="#work"       class="nav-link">Work</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#stack"      class="nav-link">Stack</a></li>
-        <li><a href="#about"      class="nav-link">About</a></li>
-        <li><a href="#contact"    class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Divya Ahire">
+        <span class="nav-logo-mark">DA<span class="logo-dot">.</span></span>
+        <span class="nav-logo-sep" aria-hidden="true">/</span>
+        <span class="nav-logo-name">Divya Ahire</span>
+      </a>
+      
+      <nav aria-label="Primary navigation" class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#work"       class="nav-link">Work</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#stack"      class="nav-link">Stack</a></li>
+          <li><a href="#about"      class="nav-link">About</a></li>
+          <li><a href="#contact"    class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-mobile-action">
+          <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-mobile-resume" aria-label="View or download resume (PDF)">
+            <span>Resume</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+          </a>
+        </div>
+      </nav>
 
-    <div class="nav-actions">
-      <a href="resume.pdf" download class="nav-resume" id="nav-btn-resume" aria-label="Download resume">Resume ↓</a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
+      <div class="nav-actions">
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-resume" id="nav-btn-resume" aria-label="View or download resume (PDF)">Resume</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
     </div>
   </header>
 

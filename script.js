@@ -96,26 +96,49 @@ const qsa = (s, c = document) => [...c.querySelectorAll(s)];
 
 
 // ─── 5. STICKY NAV & ACTIVE LINK ──────────
-window.addEventListener('scroll', () => {
+(function initNavScroll() {
   const nav = qs('#nav');
   if (!nav) return;
-  nav.classList.toggle('scrolled', window.scrollY > 20);
 
-  // Active section link highlighting
-  const sections = qsa('section[id]');
-  let active = '';
-  sections.forEach(s => {
-    const top = s.offsetTop - 120;
-    const height = s.offsetHeight;
-    if (window.scrollY >= top && window.scrollY < top + height) {
-      active = s.id;
+  const sectionIds = ['work', 'experience', 'stack', 'about', 'contact'];
+  const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+  const navLinks = qsa('.nav-link');
+
+  function updateNav() {
+    const scrollY = window.scrollY;
+    nav.classList.toggle('scrolled', scrollY > 20);
+
+    // If reached bottom of page, activate last link ('contact')
+    const scrollBottom = window.innerHeight + Math.round(scrollY);
+    const isBottom = scrollBottom >= (document.documentElement.scrollHeight - 60);
+
+    let currentActive = '';
+    if (isBottom && sections.length > 0) {
+      currentActive = sections[sections.length - 1].id;
+    } else {
+      sections.forEach(s => {
+        const top = s.getBoundingClientRect().top;
+        if (top <= 140) {
+          currentActive = s.id;
+        }
+      });
     }
-  });
 
-  qsa('.nav-link').forEach(a => {
-    a.classList.toggle('active', a.getAttribute('href') === `#${active}`);
-  });
-}, { passive: true });
+    navLinks.forEach(a => {
+      const href = a.getAttribute('href');
+      const isActive = href === `#${currentActive}`;
+      a.classList.toggle('active', isActive);
+      if (isActive) {
+        a.setAttribute('aria-current', 'page');
+      } else {
+        a.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
+})();
 
 // ─── 6. MOBILE NAVIGATION DRAWER ──────────
 (function initMobileNav() {
@@ -135,12 +158,19 @@ window.addEventListener('scroll', () => {
     setOpen(!isOpen);
   });
 
-  qsa('.nav-link', menu).forEach(link => {
+  qsa('.nav-link, .nav-mobile-resume', menu).forEach(link => {
     link.addEventListener('click', () => setOpen(false));
   });
 
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && menu.classList.contains('open')) {
+      setOpen(false);
+      toggle.focus();
+    }
+  });
+
+  document.addEventListener('click', e => {
+    if (menu.classList.contains('open') && !menu.contains(e.target) && !toggle.contains(e.target)) {
       setOpen(false);
     }
   });
