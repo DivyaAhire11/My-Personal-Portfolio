@@ -4,34 +4,7 @@
 const qs  = (s, c = document) => c.querySelector(s);
 const qsa = (s, c = document) => [...c.querySelectorAll(s)];
 
-// ─── 1. TYPEWRITER ────────────────────────
-const PHRASES = [
-  'Shipping clean code.',
-  'Building scalable web architectures.',
-  'React • Node.js • Supabase • PostgreSQL',
-  'From database design to pixel-perfect UI.',
-  'git commit -m "production-ready"'
-];
-
-(function typewriter() {
-  const el = qs('#typewriter');
-  if (!el) return;
-  let si = 0, ci = 0, del = false;
-
-  function tick() {
-    const phrase = PHRASES[si];
-    el.textContent = del
-      ? phrase.slice(0, --ci)
-      : phrase.slice(0, ++ci);
-
-    let wait = del ? 35 : 75;
-    if (!del && ci === phrase.length) { wait = 1900; del = true; }
-    else if (del && ci === 0)         { del = false; si = (si + 1) % PHRASES.length; wait = 350; }
-
-    setTimeout(tick, wait);
-  }
-  tick();
-})();
+// ─── 1. (typewriter removed — element no longer in hero) ───
 
 // ─── 2. PARTICLE CANVAS (CYBER GREEN & TEAL GLIMS) ───
 (function initParticles() {
@@ -112,32 +85,15 @@ const PHRASES = [
     }
   });
 
-  // Stagger children within work-grid and stack-grid
+  // Stagger children within work-grid
   qsa('.work-card').forEach((card, i) => {
     card.style.transitionDelay = `${i * 120}ms`;
   });
-  qsa('.stack-col').forEach((col, i) => {
-    col.style.transitionDelay = `${i * 100}ms`;
-  });
 })();
 
-// ─── 4. SKILL BAR ANIMATION ───────────────
-(function initSkillBars() {
-  const stackSection = qs('#stack');
-  if (!stackSection) return;
 
-  new IntersectionObserver((entries, observer) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        qsa('.stack-bar', stackSection).forEach(bar => {
-          const w = bar.style.getPropertyValue('--w');
-          if (w) bar.style.width = w;
-        });
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.15 }).observe(stackSection);
-})();
+// ─── 4. (skill bar animation removed — bars replaced with chips) ───
+
 
 // ─── 5. STICKY NAV & ACTIVE LINK ──────────
 window.addEventListener('scroll', () => {

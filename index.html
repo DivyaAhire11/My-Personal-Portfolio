@@ -47,101 +47,125 @@
       <canvas id="particle-canvas" aria-hidden="true"></canvas>
 
       <div class="hero-inner">
-        <!-- Left: Hero Intro Content -->
+
+        <!-- ── LEFT: Text Content ── -->
         <div class="hero-content">
-          <div class="hero-status mono">
+
+          <!-- Eyebrow -->
+          <p class="hero-eyebrow mono" aria-label="Role and education">
             <span class="pulse-dot" aria-hidden="true"></span>
-            <span>Available for Full-Stack Roles &amp; Projects</span>
-          </div>
+            FULL-STACK WEB DEVELOPER · MCA STUDENT
+          </p>
 
-          <div class="hero-greeting mono" aria-live="polite">
-            <span class="greeting-prompt" aria-hidden="true">&gt;&nbsp;</span><span id="typewriter"></span><span class="cursor" aria-hidden="true">|</span>
-          </div>
-
+          <!-- Main heading -->
           <h1 class="hero-name">
-            Hi, I'm <span class="gradient-text">Divya Ahire</span><span class="name-dot">.</span>
+            <span class="hero-name-intro">Hi, I'm</span>
+            <span class="hero-name-focal">
+              <span class="gradient-text">Divya Ahire</span><span class="name-dot">.</span>
+            </span>
           </h1>
 
-          <p class="hero-role">
-            Full-Stack Web Developer <span class="hero-role-sep" aria-hidden="true">/</span> <span class="hero-role-accent">MCA Student</span>
-          </p>
-
+          <!-- Supporting text -->
           <p class="hero-bio">
-            I build scalable, user-focused web applications with a strong foundation in
-            computer science fundamentals. Eager to solve complex problems and deploy
-            robust software solutions.
+            I build practical web applications with modern frontend, backend,
+            database, and API technologies — from database schema through
+            REST API to deployed UI.
           </p>
 
+          <!-- CTA hierarchy -->
           <div class="hero-actions">
-            <a href="#work"    class="btn-primary">View My Work</a>
-            <a href="#contact" class="btn-ghost">Get in Touch</a>
-            <a href="resume.pdf" download class="btn-ghost hero-btn-resume" aria-label="Download resume">Resume ↓</a>
+            <a href="#work" class="btn-primary" id="hero-cta-work">View My Work</a>
+            <a href="#contact" class="btn-ghost" id="hero-cta-contact">Get In Touch</a>
+            <a href="resume.pdf" download class="hero-resume-link" id="hero-cta-resume" aria-label="View or download resume">View Resume ↓</a>
           </div>
 
-          <!-- Quick stack badges -->
-          <div class="hero-stack-strip" aria-label="Core stack preview">
-            <span class="hero-stack-label mono">TECH:</span>
-            <div class="hero-stack-tags">
-              <span class="tag">React.js</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">Supabase</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">PHP</span>
-            </div>
-          </div>
-
-          <!-- Icon-only social links -->
+          <!-- Social links -->
           <div class="hero-socials" aria-label="Social profiles">
             <a href="https://github.com/DivyaAhire11" target="_blank" rel="noopener noreferrer" class="hero-social-btn" id="hs-github" aria-label="GitHub">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              <span>GitHub</span>
             </a>
             <a href="https://www.linkedin.com/in/divya-ahire" target="_blank" rel="noopener noreferrer" class="hero-social-btn" id="hs-linkedin" aria-label="LinkedIn">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <span>LinkedIn</span>
             </a>
             <a href="mailto:divyaahire246@gmail.com" class="hero-social-btn" id="hs-email" aria-label="Send email">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m3 9 9 6 9-6"/></svg>
+              <span>Email</span>
             </a>
           </div>
+
         </div>
 
-        <!-- Right: Interactive Developer Terminal / Code Card -->
-        <div class="hero-visual">
-          <div class="hero-terminal" aria-label="Engineer profile code preview">
-            <div class="terminal-header">
-              <div class="terminal-dots" aria-hidden="true">
-                <span class="dot dot-red"></span>
-                <span class="dot dot-yellow"></span>
-                <span class="dot dot-green"></span>
+        <!-- ── RIGHT: Developer Profile Card ── -->
+        <div class="hero-visual" aria-hidden="false">
+          <div class="dev-profile-card" aria-label="Developer profile summary">
+
+            <!-- Card header: avatar initials + name -->
+            <div class="dpc-header">
+              <div class="dpc-avatar" aria-hidden="true">DA</div>
+              <div class="dpc-header-text">
+                <span class="dpc-name">Divya Ahire</span>
+                <span class="dpc-title mono">Full-Stack Web Developer</span>
               </div>
-              <span class="terminal-title mono">divya_profile.ts</span>
-              <span class="terminal-badge mono">v2.6</span>
+              <span class="dpc-status-badge" aria-label="Open to work">
+                <span class="pulse-dot" aria-hidden="true"></span>
+                Open to work
+              </span>
             </div>
 
-            <div class="terminal-code mono">
-              <div class="t-line"><span class="t-kw">const</span> <span class="t-var">developer</span> = {</div>
-              <div class="t-line indent-1"><span class="t-prop">name</span>: <span class="t-str">"Divya Ahire"</span>,</div>
-              <div class="t-line indent-1"><span class="t-prop">role</span>: <span class="t-str">"Full-Stack Web Developer"</span>,</div>
-              <div class="t-line indent-1"><span class="t-prop">education</span>: {</div>
-              <div class="t-line indent-2"><span class="t-prop">current</span>: <span class="t-str">"MCA (Pune Univ)"</span>,</div>
-              <div class="t-line indent-2"><span class="t-prop">undergrad</span>: <span class="t-str">"BCS (Computer Science)"</span></div>
-              <div class="t-line indent-1">},</div>
-              <div class="t-line indent-1"><span class="t-prop">experience</span>: <span class="t-str">"DigiMiral AI Automation"</span>,</div>
-              <div class="t-line indent-1"><span class="t-prop">coreSkills</span>: [</div>
-              <div class="t-line indent-2"><span class="t-str">"React.js"</span>, <span class="t-str">"Node.js"</span>, <span class="t-str">"Supabase"</span>,</div>
-              <div class="t-line indent-2"><span class="t-str">"PostgreSQL"</span>, <span class="t-str">"Coolify"</span>, <span class="t-str">"Netlify"</span></div>
-              <div class="t-line indent-1">],</div>
-              <div class="t-line indent-1"><span class="t-prop">status</span>: <span class="t-status">"open_to_work"</span>,</div>
-              <div class="t-line indent-1"><span class="t-prop">deployable</span>: <span class="t-bool">true</span></div>
-              <div class="t-line">};</div>
+            <!-- Divider -->
+            <div class="dpc-divider" aria-hidden="true"></div>
+
+            <!-- Rows of profile data -->
+            <dl class="dpc-rows">
+
+              <div class="dpc-row">
+                <dt class="dpc-row-label mono">Education</dt>
+                <dd class="dpc-row-value">
+                  <span class="dpc-edu-current">MCA — pursuing</span>
+                  <span class="dpc-edu-sub mono">University of Pune</span>
+                </dd>
+              </div>
+
+              <div class="dpc-row">
+                <dt class="dpc-row-label mono">Experience</dt>
+                <dd class="dpc-row-value">
+                  <span class="dpc-exp-role">Full-Stack Developer Intern</span>
+                  <span class="dpc-exp-org mono">DigiMiral AI Automation</span>
+                </dd>
+              </div>
+
+              <div class="dpc-row">
+                <dt class="dpc-row-label mono">Focus</dt>
+                <dd class="dpc-row-value dpc-focus-text">
+                  Web applications · REST APIs · Database design · Deployment
+                </dd>
+              </div>
+
+              <div class="dpc-row dpc-row--stack">
+                <dt class="dpc-row-label mono">Stack</dt>
+                <dd class="dpc-stack-tags" aria-label="Primary technologies">
+                  <span class="dpc-tag">React.js</span>
+                  <span class="dpc-tag">Node.js</span>
+                  <span class="dpc-tag">PostgreSQL</span>
+                  <span class="dpc-tag">Supabase</span>
+                  <span class="dpc-tag">PHP</span>
+                  <span class="dpc-tag">Express.js</span>
+                </dd>
+              </div>
+
+            </dl>
+
+            <!-- Card footer -->
+            <div class="dpc-footer">
+              <span class="dpc-footer-loc mono">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Nashik, India
+              </span>
+              <a href="resume.pdf" download class="dpc-footer-resume mono" aria-label="Download resume">Resume ↓</a>
             </div>
 
-            <div class="terminal-footer">
-              <div class="terminal-status mono">
-                <span class="pulse-dot"></span>
-                <span>TypeScript 5.4 • Production</span>
-              </div>
-              <span class="terminal-tag mono">⚡ 0 errors</span>
-            </div>
           </div>
         </div>
 
@@ -238,42 +262,63 @@
           <h2 class="section-title">Where I've Worked</h2>
         </div>
 
-        <div class="exp-card reveal" aria-label="DigiMiral internship">
-          <div class="exp-card-left">
-            <div class="exp-badge">
-              <span class="exp-badge-dot" aria-hidden="true"></span>
-              Full-Stack Developer Intern
-            </div>
-            <p class="exp-period mono">2025 — 2026</p>
-          </div>
+        <div class="xp-timeline reveal" role="list">
 
-          <div class="exp-card-right">
-            <h3 class="exp-company">DigiMiral AI Automation and Digital Marketing Pvt. Ltd.</h3>
-            <ul class="exp-achievements" role="list">
-              <li>
-                <span class="exp-bullet" aria-hidden="true">→</span>
-                Collaborated with cross-functional teams to build, test, and deploy production web applications.
-              </li>
-              <li>
-                <span class="exp-bullet" aria-hidden="true">→</span>
-                Managed and optimized deployments using <span class="exp-em">Supabase, Hostinger, Coolify, Netlify,</span> and <span class="exp-em">Shopify</span>.
-              </li>
-              <li>
-                <span class="exp-bullet" aria-hidden="true">→</span>
-                Contributed to AI-driven automation workflows and modern web development tasks.
-              </li>
-            </ul>
-            <div class="exp-tags" aria-label="Technologies used">
-              <span class="tag">React</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">Supabase</span>
-              <span class="tag">Coolify</span>
-              <span class="tag">Netlify</span>
-              <span class="tag">Shopify</span>
+          <!-- ── Entry: DigiMiral ── -->
+          <article class="xp-entry" role="listitem" aria-label="DigiMiral internship experience">
+
+            <!-- Timeline marker -->
+            <div class="xp-marker" aria-hidden="true">
+              <span class="xp-dot"></span>
+              <span class="xp-line"></span>
             </div>
-          </div>
+
+            <!-- Content -->
+            <div class="xp-body">
+
+              <!-- Role + type badge + date -->
+              <header class="xp-header">
+                <div class="xp-title-row">
+                  <h3 class="xp-role">Full-Stack Developer Intern</h3>
+                  <span class="xp-type-badge mono">Internship</span>
+                </div>
+                <div class="xp-meta">
+                  <span class="xp-company">DigiMiral AI Automation and Digital Marketing Pvt. Ltd.</span>
+                  <span class="xp-sep" aria-hidden="true">·</span>
+                  <time class="xp-date mono" datetime="2025/2026">2025 — 2026</time>
+                </div>
+              </header>
+
+              <!-- Contribution bullets -->
+              <ul class="xp-bullets" role="list">
+                <li>
+                  <span class="xp-bullet-mark" aria-hidden="true">→</span>
+                  Collaborated with the team to build, test, and deploy web applications using React and Node.js.
+                </li>
+                <li>
+                  <span class="xp-bullet-mark" aria-hidden="true">→</span>
+                  Configured and managed application deployments using Supabase, Coolify, Netlify, and Hostinger.
+                </li>
+                <li>
+                  <span class="xp-bullet-mark" aria-hidden="true">→</span>
+                  Contributed to web development tasks involving Shopify storefronts and AI-driven automation workflows.
+                </li>
+              </ul>
+
+              <!-- Tech tags -->
+              <div class="xp-tags" aria-label="Technologies used">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Supabase</span>
+                <span class="tag">Coolify</span>
+                <span class="tag">Netlify</span>
+                <span class="tag">Shopify</span>
+              </div>
+
+            </div>
+          </article>
+
         </div>
-
       </div>
     </section>
 
@@ -288,45 +333,120 @@
           <h2 class="section-title">What I Build With</h2>
         </div>
 
-        <div class="stack-grid reveal">
+        <div class="sk-grid reveal">
 
-          <div class="stack-col">
-            <h3 class="stack-col-title mono">Languages &amp; Backend</h3>
-            <ul class="stack-list" role="list">
-              <li class="stack-row"><span class="stack-name">Python</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:78%"></span></span></li>
-              <li class="stack-row"><span class="stack-name">Java</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:72%"></span></span></li>
-              <li class="stack-row"><span class="stack-name">PHP</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:75%"></span></span></li>
-              <li class="stack-row"><span class="stack-name">Node.js</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:88%"></span></span></li>
-              <li class="stack-row"><span class="stack-name">Express.js</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:85%"></span></span></li>
-              <li class="stack-row"><span class="stack-name">REST APIs</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:90%"></span></span></li>
+          <!-- Languages -->
+          <div class="sk-category">
+            <h3 class="sk-cat-label mono">Languages</h3>
+            <ul class="sk-chips" role="list" aria-label="Languages">
+              <li><span class="sk-chip">
+                <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 18.5 7 21l1-5.5L4 12l5.5-.8L12 6l2.5 5.2L20 12l-4 3.5 1 5.5Z"/></svg>
+                Python
+              </span></li>
+              <li><span class="sk-chip">
+                <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                Java
+              </span></li>
+              <li><span class="sk-chip">
+                <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M16 18 22 12 16 6"/><path d="M8 6 2 12l6 6"/></svg>
+                JavaScript
+              </span></li>
+              <li><span class="sk-chip">
+                <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9Z"/><path d="M13 2v7h7"/></svg>
+                PHP
+              </span></li>
             </ul>
           </div>
 
-          <div class="stack-col">
-            <h3 class="stack-col-title mono">Frontend</h3>
-            <ul class="stack-list" role="list">
-              <li class="stack-row"><span class="stack-name">React.js</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:90%"></span></span></li>
-              <li class="stack-row"><span class="stack-name">JavaScript</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:88%"></span></span></li>
-              <li class="stack-row"><span class="stack-name">HTML5</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:95%"></span></span></li>
-              <li class="stack-row"><span class="stack-name">CSS3</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:92%"></span></span></li>
-            </ul>
-
-            <h3 class="stack-col-title mono" style="margin-top: 32px;">Databases</h3>
-            <ul class="stack-list" role="list">
-              <li class="stack-row"><span class="stack-name">MySQL</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:82%"></span></span></li>
-              <li class="stack-row"><span class="stack-name">MongoDB</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:80%"></span></span></li>
-              <li class="stack-row"><span class="stack-name">PostgreSQL</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:85%"></span></span></li>
+          <!-- Frontend -->
+          <div class="sk-category">
+            <h3 class="sk-cat-label mono">Frontend</h3>
+            <ul class="sk-chips" role="list" aria-label="Frontend technologies">
+              <li><span class="sk-chip">
+                <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2Z"/><path d="M2 12h20"/></svg>
+                React.js
+              </span></li>
+              <li><span class="sk-chip">
+                <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16v2l-6 6v8l-4-2v-6L4 6Z"/></svg>
+                HTML5
+              </span></li>
+              <li><span class="sk-chip">
+                <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2Z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7Z"/></svg>
+                CSS3
+              </span></li>
             </ul>
           </div>
 
-          <div class="stack-col">
-            <h3 class="stack-col-title mono">Tools &amp; DevOps</h3>
-            <ul class="stack-list" role="list">
-              <li class="stack-row"><span class="stack-name">Git / GitHub</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:92%"></span></span></li>
-              <li class="stack-row"><span class="stack-name">Docker</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:70%"></span></span></li>
-              <li class="stack-row"><span class="stack-name">Coolify</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:76%"></span></span></li>
-              <li class="stack-row"><span class="stack-name">Netlify</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:82%"></span></span></li>
-              <li class="stack-row"><span class="stack-name">Supabase</span><span class="stack-bar-wrap" aria-hidden="true"><span class="stack-bar" style="--w:80%"></span></span></li>
+          <!-- Backend -->
+          <div class="sk-category">
+            <h3 class="sk-cat-label mono">Backend</h3>
+            <ul class="sk-chips" role="list" aria-label="Backend technologies">
+              <li><span class="sk-chip">
+                <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/><path d="m9 8 3 8 3-8"/></svg>
+                Node.js
+              </span></li>
+              <li><span class="sk-chip">
+                <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/></svg>
+                Express.js
+              </span></li>
+              <li><span class="sk-chip">
+                <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9Z"/><path d="M13 2v7h7"/></svg>
+                PHP
+              </span></li>
+              <li><span class="sk-chip">
+                <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5Z"/></svg>
+                REST APIs
+              </span></li>
+            </ul>
+          </div>
+
+          <!-- Databases -->
+          <div class="sk-category">
+            <h3 class="sk-cat-label mono">Databases</h3>
+            <ul class="sk-chips" role="list" aria-label="Databases">
+              <li><span class="sk-chip">
+                <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
+                PostgreSQL
+              </span></li>
+              <li><span class="sk-chip">
+                <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
+                MySQL
+              </span></li>
+              <li><span class="sk-chip">
+                <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
+                MongoDB
+              </span></li>
+            </ul>
+          </div>
+
+          <!-- Tools & Platforms -->
+          <div class="sk-category sk-category--wide">
+            <h3 class="sk-cat-label mono">Tools &amp; Platforms</h3>
+            <ul class="sk-chips" role="list" aria-label="Tools and platforms">
+              <li><span class="sk-chip">
+                <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
+                Git
+              </span></li>
+              <li><span class="sk-chip">
+                <svg class="sk-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                GitHub
+              </span></li>
+              <li><span class="sk-chip">
+                <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+                Postman
+              </span></li>
+              <li><span class="sk-chip">
+                <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 4v16"/></svg>
+                Supabase
+              </span></li>
+              <li><span class="sk-chip">
+                <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+                Docker
+              </span></li>
+              <li><span class="sk-chip">
+                <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/></svg>
+                Coolify
+              </span></li>
             </ul>
           </div>
 
@@ -342,104 +462,121 @@
 
         <div class="section-header reveal">
           <p class="section-label mono">04 / about</p>
-          <h2 class="section-title">The Engineer Behind the Commits</h2>
+          <h2 class="section-title">A Bit About Me</h2>
         </div>
 
-        <div class="about-grid">
+        <div class="ab-grid">
 
-          <div class="about-text reveal">
-            <p>
-              A Computer Science degree forges the mental models — algorithms, systems
-              thinking, the discipline of abstraction. But it is the act of deploying
-              a feature, watching real users interact with something you built from
-              scratch, that solidifies an engineer.
-            </p>
-            <p>
-              My BCS foundation and ongoing MCA gave me the
-              <em class="em-accent">theoretical rigor</em>; my internship at DigiMiral
-              gave me the instincts. I believe in owning the complete cause-and-effect
-              chain of a product — from the pixel a user first sees, through the API
-              contract, down to the indexed query hitting the database.
-            </p>
-            <blockquote class="about-quote">
-              "Make it work, make it right, make it fast — in that order, always."
-            </blockquote>
+          <!-- ── Left: Introduction ── -->
+          <div class="ab-left reveal">
 
-            <div class="journey-timeline" aria-label="Career and education timeline">
-              <div class="journey-item">
-                <div class="journey-dot" aria-hidden="true"></div>
-                <div class="journey-body">
-                  <p class="journey-period mono">2025 — 2026</p>
-                  <h3 class="journey-role">Full-Stack Developer Intern</h3>
-                  <p class="journey-org">DigiMiral AI Automation Pvt. Ltd.</p>
-                  <p class="journey-desc">Shipped production features, integrated Supabase auth and real-time DB, deployed via Coolify and Netlify.</p>
-                </div>
+            <div class="ab-paras">
+              <p class="ab-para">
+                I'm a full-stack web developer currently pursuing my MCA at
+                KKWagh Engineering College, Nashik. My background is in Computer
+                Science — I completed my BCS from University of Pune in 2025,
+                where I built a foundation in data structures, algorithms, and
+                database systems.
+              </p>
+              <p class="ab-para">
+                I interned at DigiMiral AI Automation and Digital Marketing Pvt.
+                Ltd. (2025–2026), where I worked on building and deploying web
+                applications using React, Node.js, and Supabase, and managed
+                deployment workflows on Coolify and Netlify. That experience
+                gave me a practical understanding of how software moves from
+                local development to production.
+              </p>
+              <p class="ab-para">
+                I'm most interested in building web applications that work
+                reliably — clear API design, well-structured databases, and
+                UIs that don't get in the way. I'm currently expanding my
+                understanding of backend architecture and deployment as part
+                of my MCA coursework.
+              </p>
+            </div>
+
+            <!-- Status strip -->
+            <div class="ab-status-strip" aria-label="Current status">
+              <div class="ab-status-item">
+                <span class="ab-status-dot" aria-hidden="true"></span>
+                <span class="ab-status-label mono">Status</span>
+                <span class="ab-status-value">Open to work</span>
               </div>
-              <div class="journey-item">
-                <div class="journey-dot" aria-hidden="true"></div>
-                <div class="journey-body">
-                  <p class="journey-period mono">2022 — 2025</p>
-                  <h3 class="journey-role">Bachelor of Computer Science</h3>
-                  <p class="journey-org">University of Pune</p>
-                  <p class="journey-desc">Focused on Data Structures, Algorithms, DBMS, and Software Engineering.</p>
-                </div>
+              <div class="ab-status-item">
+                <span class="ab-status-label mono">Location</span>
+                <span class="ab-status-value">Nashik, India</span>
               </div>
-              <div class="journey-item journey-item--active">
-                <div class="journey-dot journey-dot--active" aria-hidden="true"></div>
-                <div class="journey-body">
-                  <p class="journey-period mono">2025 — Present</p>
-                  <h3 class="journey-role">Master of Computer Applications</h3>
-                  <p class="journey-org">University of Pune</p>
-                  <p class="journey-desc">Advancing in distributed systems, cloud architecture, and enterprise software engineering.</p>
-                </div>
+              <div class="ab-status-item">
+                <span class="ab-status-label mono">Preference</span>
+                <span class="ab-status-value">On-site</span>
               </div>
             </div>
+
           </div>
 
-          <aside class="about-sidebar">
-            <div class="sidebar-card reveal">
-              <h3 class="sidebar-card-title">Engineering Principles</h3>
-              <ul class="principles" role="list">
-                <li class="principle">
-                  <span class="principle-num mono" aria-hidden="true">01</span>
-                  <div><strong>Clean Architecture</strong><p>Code is written for the next engineer, not just the next compiler.</p></div>
+          <!-- ── Right: Cards ── -->
+          <aside class="ab-right">
+
+            <!-- Education card -->
+            <div class="ab-card reveal" aria-label="Education">
+              <h3 class="ab-card-label mono">Education</h3>
+
+              <div class="ab-edu-list">
+
+                <!-- MCA — current -->
+                <div class="ab-edu-entry ab-edu-entry--active">
+                  <div class="ab-edu-marker" aria-hidden="true">
+                    <span class="ab-edu-dot ab-edu-dot--active"></span>
+                    <span class="ab-edu-connector"></span>
+                  </div>
+                  <div class="ab-edu-body">
+                    <div class="ab-edu-header">
+                      <span class="ab-edu-degree">Master of Computer Applications</span>
+                      <span class="ab-edu-status mono">current</span>
+                    </div>
+                    <p class="ab-edu-inst">KKWagh Engineering College, Nashik</p>
+                    <time class="ab-edu-date mono" datetime="2026">2026 – Present</time>
+                  </div>
+                </div>
+
+                <!-- BCS -->
+                <div class="ab-edu-entry">
+                  <div class="ab-edu-marker" aria-hidden="true">
+                    <span class="ab-edu-dot"></span>
+                  </div>
+                  <div class="ab-edu-body">
+                    <span class="ab-edu-degree">Bachelor of Computer Science</span>
+                    <p class="ab-edu-inst">University of Pune</p>
+                    <time class="ab-edu-date mono" datetime="2022/2025">2022 – 2025</time>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Engineering focus card -->
+            <div class="ab-card reveal" aria-label="Engineering focus">
+              <h3 class="ab-card-label mono">Engineering Focus</h3>
+              <ul class="ab-focus-list" role="list">
+                <li>
+                  <span class="ab-focus-mark" aria-hidden="true">→</span>
+                  Full-stack web application development
                 </li>
-                <li class="principle">
-                  <span class="principle-num mono" aria-hidden="true">02</span>
-                  <div><strong>Human-Centric UI</strong><p>Every interaction must reduce cognitive load, not add to it.</p></div>
+                <li>
+                  <span class="ab-focus-mark" aria-hidden="true">→</span>
+                  REST API design and backend architecture
                 </li>
-                <li class="principle">
-                  <span class="principle-num mono" aria-hidden="true">03</span>
-                  <div><strong>Performance First</strong><p>Speed is a feature. Latency is a silent tax on user trust.</p></div>
+                <li>
+                  <span class="ab-focus-mark" aria-hidden="true">→</span>
+                  Relational database modelling (PostgreSQL, MySQL)
                 </li>
-                <li class="principle">
-                  <span class="principle-num mono" aria-hidden="true">04</span>
-                  <div><strong>Defensive by Default</strong><p>Security and edge cases belong in the design phase, not post-launch.</p></div>
+                <li>
+                  <span class="ab-focus-mark" aria-hidden="true">→</span>
+                  Application deployment and hosting workflows
                 </li>
               </ul>
             </div>
 
-            <div class="sidebar-card sidebar-card--specs reveal">
-              <h3 class="sidebar-card-title mono">quick_facts.json</h3>
-              <dl class="specs">
-                <div class="spec-row">
-                  <dt class="spec-k mono">location</dt>
-                  <dd class="spec-v mono">"Nashik, India"</dd>
-                </div>
-                <div class="spec-row">
-                  <dt class="spec-k mono">status</dt>
-                  <dd class="spec-v mono spec-open">"open_to_work"</dd>
-                </div>
-                <div class="spec-row">
-                  <dt class="spec-k mono">education</dt>
-                  <dd class="spec-v mono">"MCA (pursuing)"</dd>
-                </div>
-                <div class="spec-row">
-                  <dt class="spec-k mono">prefer</dt>
-                  <dd class="spec-v mono">"on-site"</dd>
-                </div>
-              </dl>
-            </div>
           </aside>
 
         </div>
@@ -452,38 +589,99 @@
     <section class="section section--contact" id="contact" aria-label="Contact">
       <div class="container container--narrow">
 
-        <p class="contact-label mono">05 / contact</p>
-        <h2 class="contact-title reveal">
-          Let's Build<br /><em class="contact-title-em">Something Together.</em>
+        <!-- Section label -->
+        <p class="ct-section-label mono">05 / contact</p>
+
+        <!-- Headline -->
+        <h2 class="ct-headline reveal">
+          Have a project or<br />
+          <span class="ct-headline-em">opportunity in mind?</span>
         </h2>
-        <p class="contact-sub reveal">
-          Open to full-time roles, freelance projects, and interesting collaborations.
-          My inbox is always open — even if it's just to talk architecture.
+
+        <!-- Supporting text -->
+        <p class="ct-sub reveal">
+          I'm open to discussing software development projects, internships,
+          and engineering opportunities.
         </p>
 
-        <div class="contact-actions reveal">
-          <a href="mailto:divyaahire246@gmail.com" class="btn-primary btn-lg" id="btn-email">Say Hello →</a>
-          <button type="button" class="btn-ghost btn-lg btn-copy-email" id="btn-copy-email" data-email="divyaahire246@gmail.com" aria-label="Copy email address to clipboard">
-            <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+        <!-- Email address display -->
+        <p class="ct-email-display mono reveal">divyaahire246@gmail.com</p>
+
+        <!-- CTA buttons -->
+        <div class="ct-actions reveal" role="group" aria-label="Contact actions">
+
+          <!-- Primary: mailto -->
+          <a
+            href="mailto:divyaahire246@gmail.com"
+            class="btn-primary btn-lg ct-btn"
+            id="btn-email"
+            aria-label="Send email to Divya Ahire"
+          >Say Hello</a>
+
+          <!-- Secondary: copy email (JS handles this) -->
+          <button
+            type="button"
+            class="btn-ghost btn-lg ct-btn"
+            id="btn-copy-email"
+            data-email="divyaahire246@gmail.com"
+            aria-label="Copy email address to clipboard"
+            aria-live="polite"
+          >
+            <svg class="copy-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+              <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+            </svg>
             <span id="copy-email-text">Copy Email</span>
           </button>
-          <a href="resume.pdf" download class="btn-ghost btn-lg" id="btn-dl-resume">Download Resume ↓</a>
+
+          <!-- Tertiary: resume download -->
+          <a
+            href="resume.pdf"
+            download
+            class="btn-ghost btn-lg ct-btn ct-btn--tertiary"
+            id="btn-dl-resume"
+            aria-label="Download resume PDF"
+          >Download Resume ↓</a>
+
         </div>
 
-        <div class="contact-socials reveal" aria-label="Social links">
-          <a href="https://github.com/DivyaAhire11" target="_blank" rel="noopener noreferrer" class="social-pill" id="social-gh">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        <!-- Divider -->
+        <div class="ct-divider" aria-hidden="true"></div>
+
+        <!-- Social links -->
+        <nav class="ct-socials reveal" aria-label="Social profiles">
+          <a
+            href="https://github.com/DivyaAhire11"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="ct-social-link"
+            id="social-gh"
+            aria-label="GitHub profile"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
             GitHub
           </a>
-          <a href="https://www.linkedin.com/in/divya-ahire" target="_blank" rel="noopener noreferrer" class="social-pill" id="social-li">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <a
+            href="https://www.linkedin.com/in/divya-ahire"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="ct-social-link"
+            id="social-li"
+            aria-label="LinkedIn profile"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             LinkedIn
           </a>
-          <a href="mailto:divyaahire246@gmail.com" class="social-pill" id="social-mail">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m3 9 9 6 9-6"/></svg>
+          <a
+            href="mailto:divyaahire246@gmail.com"
+            class="ct-social-link"
+            id="social-mail"
+            aria-label="Send email"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m3 9 9 6 9-6"/></svg>
             Email
           </a>
-        </div>
+        </nav>
 
       </div>
     </section>
